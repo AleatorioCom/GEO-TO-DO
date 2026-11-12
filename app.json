@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Geo-To-Do",
+    "slug": "geo-to-do",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "O Geo-To-Do usa sua localização para avisar quando você estiver perto de uma tarefa."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "reminders"
+        }
+      ],
+      "expo-sensors"
+    ],
+    "android": {
+      "package": "com.example.geotodo",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Usamos sua localização para lembretes por proximidade."
+      }
+    }
+  }
+}
