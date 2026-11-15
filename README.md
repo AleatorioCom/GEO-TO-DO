@@ -22,6 +22,44 @@ Permitir que o usuário cadastre uma tarefa, escolha sua localização no mapa e
 
 > **Importante:** as três tarefas mais próximas aparecem em cards **dentro do aplicativo**. Um widget nativo para a tela inicial do Android **ainda não foi implementado**.
 
+## Download e instalação do APK (Android)
+
+O projeto disponibiliza um arquivo APK para instalação direta em dispositivos Android, permitindo utilizar o aplicativo sem a necessidade de instalar Node.js, Expo ou configurar um ambiente de desenvolvimento.
+
+### Localização do APK
+
+O arquivo de instalação está localizado na pasta **`APK do projeto`**, dentro do diretório principal:
+
+```text
+GEO-TO-DO/
+└── APK do projeto/
+    └── GEO-TO-DO.apk
+```
+
+**Caminho do arquivo:** `APK do projeto/GEO-TO-DO.apk`
+
+Caso o arquivo esteja publicado no repositório, ele pode ser acessado pelo seguinte link:
+
+[**Acessar o APK do GEO-TO-DO**](https://github.com/AleatorioCom/GEO-TO-DO/blob/main/APK%20do%20projeto/GEO-TO-DO.apk)
+
+### Como instalar no Android
+
+1. Acesse o repositório do projeto no GitHub.
+2. Abra a pasta **`APK do projeto`**.
+3. Selecione o arquivo **`GEO-TO-DO.apk`** e faça o download.
+4. No dispositivo Android, abra o arquivo APK baixado.
+5. Caso seja solicitado, autorize a instalação de aplicativos dessa fonte nas configurações do Android.
+6. Confirme a instalação e abra o aplicativo **GEO-TO-DO**.
+7. Conceda as permissões de localização e notificações para utilizar as funcionalidades do projeto.
+
+**Observações:**
+
+- O APK é destinado a dispositivos **Android**, não sendo compatível com iOS.
+- Não é necessário instalar o Expo Go para utilizar a versão APK.
+- O funcionamento das notificações depende das permissões concedidas pelo usuário.
+- Os lembretes por proximidade funcionam enquanto o aplicativo está em primeiro plano.
+- Instale apenas o APK disponibilizado pelo repositório oficial do projeto.
+
 ## Tecnologias utilizadas
 
 | Tecnologia | Aplicação no projeto |
@@ -41,56 +79,66 @@ Permitir que o usuário cadastre uma tarefa, escolha sua localização no mapa e
 
 ```text
 GEO-TO-DO/
+├── APK do projeto/
+│   └── GEO-TO-DO.apk
+├── assets/
+│   ├── icons/
+│   └── images/
+├── src/
+│   ├── components/      # Botões, cards, marcadores e círculos
+│   ├── context/         # Estado das tarefas e do tema
+│   ├── hooks/           # Hook de localização
+│   ├── navigation/      # Navegação entre telas
+│   ├── screens/         # Início, mapa, cadastro, detalhes e configurações
+│   ├── services/        # Localização, notificações, sensores e armazenamento
+│   └── utils/           # Cálculo e formatação de distâncias
+├── .gitignore
 ├── App.js
 ├── app.json
 ├── package.json
 ├── package-lock.json
-├── assets/
-│   ├── icons/
-│   └── images/
-└── src/
-    ├── components/        # Botões, cards, marcadores e círculos
-    ├── context/           # Estado das tarefas e do tema
-    ├── hooks/             # Hook de localização
-    ├── navigation/        # Navegação entre telas
-    ├── screens/           # Início, mapa, cadastro, detalhes e configurações
-    ├── services/          # Localização, notificações, sensores e armazenamento
-    └── utils/             # Cálculo e formatação de distâncias
+└── README.md
 ```
 
-## Como executar
+## Como executar pelo código-fonte
+
+Além da instalação direta por APK, o projeto pode ser executado pelo código-fonte para fins de desenvolvimento, testes e modificações.
 
 ### Pré-requisitos
 
 - Node.js (versão LTS) e npm instalados.
 - Um dispositivo Android ou iOS para testar a localização e as notificações.
 - Permissões de localização e notificações habilitadas no dispositivo.
-- Aplicativo Expo Go instalado
+- Aplicativo Expo Go instalado, quando compatível com os recursos nativos do projeto.
 
 ### Instalação
 
-1. Clone este repositório e entre na pasta:
+**1. Clone este repositório e entre na pasta:**
 
-   ```bash
-   git clone https://github.com/AleatorioCom/GEO-TO-DO.git
-   cd GEO-TO-DO
-   ```
+```bash
+git clone https://github.com/AleatorioCom/GEO-TO-DO.git
+cd GEO-TO-DO
+```
 
-2. Instale as dependências:
+**2. Instale as dependências:**
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. Inicie o Expo:
+Esse comando instalará automaticamente as bibliotecas necessárias com base nos arquivos `package.json` e `package-lock.json`.
 
-   ```bash
-   npx expo start
-   ```
+**3. Inicie o Expo:**
 
-4. Abra o aplicativo no dispositivo ou em um ambiente de desenvolvimento compatível com a configuração do projeto.
+```bash
+npx expo start
+```
+
+**4. Abra o aplicativo** no dispositivo ou em um ambiente de desenvolvimento compatível com a configuração do projeto.
 
 **Observação:** alguns recursos nativos podem exigir uma *development build* em vez do Expo Go. A renderização de mapas também pode precisar de configuração de chave de API, dependendo da plataforma e da forma de compilação.
+
+>Caso queira apenas utilizar o aplicativo em um dispositivo Android, recomenda-se instalar o APK disponível na pasta `APK do projeto`, evitando a necessidade de configurar o ambiente de desenvolvimento.
 
 ## Como utilizar
 
