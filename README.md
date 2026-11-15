@@ -65,6 +65,7 @@ GEO-TO-DO/
 - Node.js (versão LTS) e npm instalados.
 - Um dispositivo Android ou iOS para testar a localização e as notificações.
 - Permissões de localização e notificações habilitadas no dispositivo.
+- Aplicativo Expo Go instalado
 
 ### Instalação
 
